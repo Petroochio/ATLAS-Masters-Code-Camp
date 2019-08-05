@@ -14,6 +14,6 @@ This section will be updated with links to an outline of each class as I finaliz
 - Day 1 *link will be uploaded soon*
 
 ## Meeting and Contact Information
-We will meet in **ATLS 104** from 4-7 pm, Monday - Thursday. I will also hold office hours in **ATLS 225** from 3-4 pm every day before we meet. You can also reach me at **peter.gyory@colorado.edu**
+We will meet in **ATLS 104** from 4-7 pm, Tuesday - Thursday. I will also hold office hours in **ATLS 225** from 3-4 pm every day before we meet. You can also reach me at **peter.gyory@colorado.edu**
 
 Let's code some cool stuff!
