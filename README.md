@@ -11,7 +11,7 @@ That's it!
 ## Classes
 This section will be updated with links to an outline of each class as I finalize them. I will also add each set of lecture slides [here](https://drive.google.com/drive/folders/1wGQJuUNkABrol8sglzwxxfkUlXbFwmMQ?usp=sharing) as we go through them. *You must have a CU Boulder email account to access the slides.*
 
-- Day 1 *link will be uploaded soon*
+- [Day 1](./Classes/Day1.md)
 
 ## Meeting and Contact Information
 We will meet in **ATLS 104** from 4-7 pm, Tuesday - Thursday. I will also hold office hours in **ATLS 225** from 3-4 pm every day before we meet. You can also reach me at **peter.gyory@colorado.edu**
