@@ -40,7 +40,7 @@ Variables are an essential part of programming. In simple terms they allow us to
 
 - `int`: Ints are an integer value, which means an int must be a whole number. ints in Processing can range from -2,147,483,647 to +2,147,483,647. (that's 32 bits!)
 -  `floats`: Floats are the other important numerical type in Processing, they allow you to store decimal numbers. When you declare a float you should use a decimal point (for example `float half = 0.5;`)
-- `bool`: Bools or Booleans store a binary value of either `true` or `false`. When you declare a bool you must use the appropriate keyword: `bool isOn = true;`. Tip for using bools, name your variables like yes or no questions.
+- `boolean`: Booleans store a binary value of either `true` or `false`. When you declare a Boolean you must use the appropriate keyword: `bool isOn = true;`. Tip for using Booleans, name your variables like yes or no questions.
 - `char`: Chars are a single characters, for example a b c 1 2 3 are all individual characters. Capital letters are considered separate characters from lowercase characters as well. When declaring a character in Processing you must use single quotes, (`char letter = 'a';`)
 - `string`: Strings are a collection of characters all stored in one variable, and they are declared with double quotes. (`string name = "Peter";`)
 
