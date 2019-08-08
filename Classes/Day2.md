@@ -3,7 +3,7 @@
 ## Examples!
 Processing has loads of examples to introduce you to different concepts and capabilities. You can use these to get inspiration or figure out how to solve a problem. Check them out under File->Examples in the Processing editor. Also don't forget to check out the Processing [reference](https://processing.org/reference/) if you are curious about what Processing can do.
 
-## Repeating Yourself
+## Repeating Ourselves
 As you saw with the functions yesterday, it is very easy to do the same thing over and over again in code. With the code for drawing multiple trees, we turned it into a function, and then called that function multiple times. But if we want to create more than a couple of trees, we would again end up with a bunch of lines of code that look the same. We can avoid that with loops!
 
 ## Loops
