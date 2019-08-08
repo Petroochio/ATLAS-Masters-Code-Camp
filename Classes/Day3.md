@@ -1,4 +1,4 @@
-# ATLAS Code Camp: Day 2
+# ATLAS Code Camp: Day 3
 
 ## The Other Kind of Loop
 Yesterday we talked about while loops and how to create them with a counter like this
@@ -142,22 +142,22 @@ So applying what we learned about arrays, we can make a much more concise versio
 ```
 int cellSize;
 int numCells = 4;
-boolean[] cellsOn;
+boolean[] cells;
 boolean lastFramePressed = false;
 
 void setup() {
   size(720, 720);
   cellSize = width / numCells;
-  cellsOn = new boolean[numCells];
+  cells = new boolean[numCells];
 
   for (int i = 0; i < numCells; i += 1) {
-    cellsOn[i] = false; 
+    cells[i] = false; 
   }
+
+  background(0);
 }
 
 void draw() {
-  background(0);
-
   if (mousePressed && !lastFramePressed) {
     for (int i = 0; i < numCells; i += 1) {
       int cellX = i * cellSize;
@@ -165,22 +165,19 @@ void draw() {
 
       if (mouseX > cellX && mouseX < cellX + cellSize) {
         if (mouseY > cellY && mouseY < cellY + cellSize) {
-          cellsOn[i] = !cellsOn[i];
+          cells[i] = !cells[i];
+
+          if (cells[i]) fill(250);
+          else fill(0);
+
+          rect(cellX, cellY, cellSize, cellSize);
         }
       }
     }
   }
   lastFramePressed = mousePressed;
-
-  for (int i = 0; i < numCells; i += 1) {
-    if (cellsOn[i]) fill(250);
-    else fill(0);
-
-    rect(i * cellSize, 0, cellSize, cellSize);
-  }
 }
 ```
 
 ### Now Make One For All of the Rows!
 Make a cell toggle for each one of the rows!
-
