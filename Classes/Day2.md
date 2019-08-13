@@ -115,7 +115,78 @@ Just like for math operations, we have operators for making comparisons between 
 - `<=`: Returns true if the value on the left side is less than or equal to the value on the right `1 <= 1`
 
 ### On To The DVD
-Will be posted after class!
+Using what we just learned about conditionals gives us everything we need to create a knock off of those old DVD screen saver, first let's get the setup out of the way.
+```
+int logoSize = 30;
+int x;
 
-### Homework!
-Go find a cool screen saver to share with the class for tomorrow!
+void setup() {
+  size(1280, 720);
+  x = width / 2;
+}
+
+void draw() {
+  // this is where our update code will go
+
+  // draw commands
+  noStroke();
+  background(10);
+  rect(x - logoSize / 2, height / 2, logoSize, logoSize);
+}
+```
+So our basic setup has a variable for the x position of the logo, and a variable for the logo size. In our set up we set the initial x position, and to show it we are drawing the rect with at `x - logoSize / 2` so that it is centered on our actual x position. To get it to move, let's add another variable for the speed it will move at and add it to the x coordinate every frame.
+```
+int logoSize = 30;
+int x;
+int speedX = 7; // 7 is arbitary, try different speeds to see how it feels.
+
+void setup() {
+  size(1280, 720);
+  x = width / 2;
+}
+
+void draw() {
+  // update
+  x += speedX;
+
+  // draw commands
+  noStroke();
+  background(10);
+  rect(x - logoSize / 2, height / 2, logoSize, logoSize);
+}
+```
+You'll notice that our square is disappearing off of the side of the screen, oh no! Let's fix this, we will use a simple if statement to change the speed when it passes the wall on the right.
+```
+int logoSize = 30;
+int x;
+int speedX = 7; // 7 is arbitary, try different speeds to see how it feels.
+
+void setup() {
+  size(1280, 720);
+  x = width / 2;
+}
+
+void draw() {
+  // update
+  // we are subtracting half the size from the width so it bounces exactly
+  // at the edge instead of a little after
+  if (x > width - logoSize / 2) {
+    speedX = speedX * -1;
+  }
+  x += speedX;
+
+  // draw commands
+  noStroke();
+  background(10);
+  rect(x - logoSize / 2, height / 2, logoSize, logoSize);
+}
+```
+Now it's disappearing of the left side. To fix this we can add an *or* clause to our bounce condition, this is done by putting `||` between the two expressions. Replace your if statment with
+```
+if (x > width - logoSize / 2 || x < logoSize / 2) {
+  speedX = speedX * -1;
+}
+```
+Great! Our square is trapped on the screen forever. On your own add a y coordinate that changes over time like our x, and make it bounce off of the top and bottom of the window.
+
+Finally, if you want to swap in an image for the logo, look at the [Processing reference](https://processing.org/reference/image_.html) for how to use images

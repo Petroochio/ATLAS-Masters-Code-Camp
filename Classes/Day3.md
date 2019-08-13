@@ -180,4 +180,4 @@ void draw() {
 ```
 
 ### Now Make One For All of the Rows!
-Make a cell toggle for each one of the rows!
+Make a cell toggle for each one of the rows, you will need to add a new array for each row.
