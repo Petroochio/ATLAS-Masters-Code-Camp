@@ -14,6 +14,7 @@ This section will be updated with links to an outline of each class as I finaliz
 - [Day 1](./Classes/Day1.md)
 - [Day 2](./Classes/Day2.md)
 - [Day 3](./Classes/Day3.md)
+- [Day 4](./Classes/Day4.md)
 
 ## Meeting and Contact Information
 We will meet in **ATLS 104** from 4-7 pm, Tuesday - Thursday. I will also hold office hours in **ATLS 225** from 3-4 pm every day before we meet. You can also reach me at **peter.gyory@colorado.edu**
