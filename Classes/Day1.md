@@ -72,11 +72,11 @@ Sometimes we want to do the same thing a bunch of times in slightly different wa
 ```
 void setup() {
   size(640, 480);
-  strokeTwoCircles()
+  strokeTwoCircles();
 }
 
-void function strokeTwoCircles() {
-  int size = 20
+void strokeTwoCircles() {
+  int size = 20;
 
   stroke(255, 0, 0);
   ellipse(100, 100, size, size);
