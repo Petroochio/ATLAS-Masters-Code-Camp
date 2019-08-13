@@ -89,7 +89,7 @@ Then when we want to call that function we just run `strokeTwoCircles();`. Make 
 
 If we want to make a function that can draw the same thing based on a size we pass in, we just add a variable to the function declaration inside of the parenthesis. 
 ```
-void function strokeTwoCircles(int size) {
+void strokeTwoCircles(int size) {
   stroke(255, 0, 0);
   ellipse(100, 100, size, size);
 
@@ -101,7 +101,7 @@ When you call this function make sure you remember to pass in an int for the siz
 
 These are called the parameters of the function, and you can have as many as you want. Now let's make it so we can change the x and y position of the circles by adding more parameters.
 ```
-void function strokeTwoCircles(int x, int, y, int size) {
+void strokeTwoCircles(int x, int, y, int size) {
   stroke(255, 0, 0);
   ellipse(x, y, size, size);
 
