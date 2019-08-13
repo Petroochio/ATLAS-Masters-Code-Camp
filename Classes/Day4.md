@@ -1,7 +1,7 @@
 # ATLAS Code Camp: Day 4
 
 ## Recap with Breakout
-Today we will do a recap by building the game breakout. This activity is based on the [excellent tutorial](https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) from Mozilla for JavaScript.
+Today we will do a recap by building the game breakout. This activity is based on the [excellent tutorial](https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) from Mozilla for JavaScript Game Development.
 
 ### Getting Started
 Let's get our basic Processing setup going. Remember the `setup` and `draw` functions we are defining are automatically called by processing at run time.
@@ -129,7 +129,7 @@ The ball doesn't hit the paddle yet, let's get that going. To do this we are goi
 ```
 if(x > mouseX - paddleW / 2 && x < mouseX + paddleW / 2) {
   if (y > paddleY - paddleH / 2 && y < paddleY + paddleH / 2) {
-    speedY = speedY;
+    speedY = -speedY;
   }
 }
 ```
