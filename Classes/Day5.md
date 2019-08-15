@@ -201,4 +201,4 @@ Yay, no more errors!
 Now add the cell toggling for all of the other adjacent cells on your own! You can even switch back to using array literals if you want to mess around with the starting state.
 
 ## Loading data in from a file
-We will walk through this section in class, and I will update this page based on how far we get
+We will walk through this section in class, and I will update this page based on how far we get.
