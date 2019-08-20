@@ -201,4 +201,47 @@ Yay, no more errors!
 Now add the cell toggling for all of the other adjacent cells on your own! You can even switch back to using array literals if you want to mess around with the starting state.
 
 ## Loading data in from a file
-We will walk through this section in class, and I will update this page based on how far we get.
+So now that we have this awesome game, let's look at a way to make it so we can have multiple levels. An easy way to do this is to create a file holding an array that looks like the one we are already using.
+
+### JSON
+JSON, or JavaScript Object Notation, is a simple file format which enables you to write datastructures as plain text for later use. Today we are just going to create a 2D array in JSON and use that to describe our level. Create an empty text file in your sketch folder and give it the extension `.json`, then put our 2D array in there for the grid layout. *arrays in JSON use [] instead of {} for declarations*
+```
+[
+  [ false, true, false, false, false ],
+  [ false, true, false, false, true ],
+  [ false, true, false, false, true ],
+  [ false, false, false, true, false ],
+  [ false, false, false, true, false ]
+]
+```
+
+### Changing our Code
+It's actually going to be fairly simple to make it so we can load this JSON in from our previous code.
+
+First remove the `cellSize` variable declaration from the top of the draw function, and change our variables outside the setup function to look like this
+```
+int gridSize;
+boolean[][] cells;
+boolean lastFramePressed = false;
+```
+
+Inside the setup is where we are actually going to do the loading. We will be using the [**JSONArray**](https://processing.org/reference/JSONArray.html) object to bring in our level config. Change our setup function to load the file then loop over the loaded array. We will have to parse it as we loop through it using the `.getJSONArray(i)` function of JSONArray. Your setup function should now look like this. *Note that the JSONArray doesn't have a size property, instead it uses .size() to get it's size*
+```
+void setup() {
+  size(720, 720);
+  background(0);
+  
+  JSONArray grid = loadJSONArray("level1.json");
+
+  gridSize = grid.size();
+  cells = new boolean[gridSize][gridSize];
+
+  for (int row = 0; row < grid.size(); row += 1) {
+    JSONArray rowArray = grid.getJSONArray(row);
+
+    for (int col = 0; col < rowArray.size(); col += 1) {
+      cells[row][col] = rowArray.getBoolean(col);
+    }
+  }
+}
+```
