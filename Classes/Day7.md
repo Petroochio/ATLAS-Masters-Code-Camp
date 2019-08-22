@@ -8,3 +8,29 @@ Now that we've learned the basics, it's time for you to choose your first projec
 - A local multiplayer game with keyboard controls
 
 Or whatever sounds fun to you!
+
+## Timer Code
+Here is the code from the timer example we went over in class
+```
+int prevTimestamp = 0;
+int exTimer = 3000; // 3 seconds
+
+void setup() {
+  // Millis() returns the time in milliseconds since the app started
+  prevTimestamp = millis();
+}
+
+void draw() {
+  int currentTimestamp = millis();
+  int deltaTime = currentTimestamp - prevTimestamp;
+
+  if (exTimer <= 0) {
+    println("times up!");
+  } else {
+    exTimer -= deltaTime;
+  }
+
+  // Do this last so the next frame knows the timestamp of the last frame
+  prevTimestamp = currentTimestamp;
+}
+```
